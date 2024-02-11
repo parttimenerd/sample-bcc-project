@@ -63,6 +63,8 @@ limactl start hello-ebpf.yaml
 limactl shell hello-ebpf
 ```
 
+Vim and tmux are installed in the VM.
+
 Build
 -----
 ```shell
@@ -71,6 +73,7 @@ Build
 
 Usage
 -----
+With root privileges (`sudo PATH=$PATH`):
 ```shell
 java --enable-preview --enable-native-access=ALL-UNNAMED -jar target/sample-bcc-project.jar
 # or

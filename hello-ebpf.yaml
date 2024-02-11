@@ -22,4 +22,4 @@ provision:
     apt-get install -y libelf-dev libpcap-dev libbfd-dev binutils-dev build-essential make 
     apt-get install -y linux-tools-common linux-tools-$(uname -r) 
     apt-get install -y bpfcc-tools libbpfcc-dev
-    apt-get install -y python3-pip zsh tmux openjdk-21-jre-headless maven
+    apt-get install -y python3-pip zsh tmux openjdk-21-jre-headless maven tmux
