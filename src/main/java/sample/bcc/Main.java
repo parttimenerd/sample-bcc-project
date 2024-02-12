@@ -100,16 +100,42 @@ public class Main {
 
     static @Nullable String formatTrace(BPF.TraceFields f, boolean skipOthers) {
         String another = "Another syscall: ";
+        String line = f.line().replace("bpf_trace_printk: ", "");
         // replace other syscall with their names
-        if (f.line().contains(another)) {
+        if (line.contains(another)) {
             // skip these lines if --skip-others is passed
             if (skipOthers) {
                 return null;
             }
             var syscall =
-                    Syscalls.getSyscall(Integer.parseInt(f.line().substring(f.line().indexOf(another) + another.length())));
-            return f.line().replace(another + syscall.number(), another + syscall.name());
+                    Syscalls.getSyscall(
+                            Integer.parseInt(
+                                    line.substring(
+                                            line.indexOf(another) + 
+                                                    another.length())));
+            return line.replace(another + syscall.number(), 
+                    another + syscall.name());
         }
-        return f.line();
+        return line;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
