@@ -80,6 +80,13 @@ java --enable-preview --enable-native-access=ALL-UNNAMED -jar target/sample-bcc-
 ./run.sh
 ```
 
+Other Examples
+--------------
+For a recent blog post, I implemented a version of the 
+[HelloTail](https://github.com/parttimenerd/hello-ebpf/blob/main/bcc/src/main/java/me/bechberger/ebpf/samples/chapter2/HelloTail.java) 
+example from the [hello-ebpf](https://github.com/parttimenerd/hello-ebpf) repository
+as its own project. You can find it in the [tail-example](https://github.com/parttimenerd/sample-bcc-project/tree/tail-example) branch of this repository.
+
 Contributing
 ------------
 Please open an issue or a pull request if you have any problems.
